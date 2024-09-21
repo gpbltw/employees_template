@@ -8,27 +8,41 @@ class EmployeesAddForm extends Component {
     this.state = {
       name: "",
       salary: "",
+      error: "",
     };
   }
 
   onValueChange = (e) => {
     this.setState({
       [e.target.name]: e.target.value,
+      error: "",
     });
   };
 
   onSubmit = (e) => {
     e.preventDefault();
+    if (this.state.name.trim() === "") {
+      this.setState({ error: "Поле не может быть пустым" });
+      return;
+    }
+    if (!isNaN(this.state.name)) {
+      this.setState({ error: "Поле не может быть числом" });
+      return;
+    }
+    if (this.state.salary.trim() === "") {
+      this.setState({ error: "Поле не может быть пустым" });
+      return;
+    }
     this.props.onAdd(this.state.name, this.state.salary);
     this.setState({
       name: "",
       salary: "",
+      error: "",
     });
   };
 
   render() {
-    const { name, salary } = this.state;
-
+    const { name, salary, error } = this.state;
     return (
       <div className="app-add-form">
         <h3>Добавьте нового сотрудника</h3>
@@ -54,6 +68,7 @@ class EmployeesAddForm extends Component {
             Добавить
           </button>
         </form>
+        <p id="error-message">{error}</p>
       </div>
     );
   }
