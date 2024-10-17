@@ -1,70 +1,65 @@
-# Getting Started with Create React App
+# ReactJS веб-приложение для учёта сотрудников в компании, написанное с использованием классовых компонентов
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+## Функционал
 
-## Available Scripts
+- Header с динамическими счетчиками
 
-In the project directory, you can run:
+![image](https://github.com/user-attachments/assets/3c4e3219-c24b-4447-8238-8805df073beb)
 
-### `yarn start`
+Отображаются два показателя, которые обновляются автоматически при изменении данных.
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
+![image](https://github.com/user-attachments/assets/153cc1ae-823b-411c-8101-cc54510d7af0)
 
-The page will reload if you make edits.\
-You will also see any lint errors in the console.
+- Поиск и фильтрация
 
-### `yarn test`
+![image](https://github.com/user-attachments/assets/0e98bf95-610a-4b3c-b74d-e74853170b9b)
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+Поиск осуществляется по первой букве имени сотрудника, независимо от регистра.
 
-### `yarn build`
+![image](https://github.com/user-attachments/assets/3038bb80-1b40-40a8-8661-a8634eedd38d)
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+Фильтр "На повышение": отображаются только сотрудники, отмеченные звёздочкой, что указывает на возможность их повышения.
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+![image](https://github.com/user-attachments/assets/58579117-c1b1-4c44-96c1-7d00c7bd39ca)
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+Фильтр "З/П больше 1000$": отображаются сотрудники с зарплатой, превышающей 1000 долларов.
 
-### `yarn eject`
+![image](https://github.com/user-attachments/assets/5fa5fc18-42b2-4607-9b00-43ce87e8be4a)
 
-**Note: this is a one-way operation. Once you `eject`, you can’t go back!**
+- Управление сотрудниками
 
-If you aren’t satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+При клике на поле с именем сотрудника рядом с ним появляется звёздочка, обозначающая, что его рассматривают на повышение.
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you’re on your own.
+![Запись 2024-10-17 133946](https://github.com/user-attachments/assets/e87758bb-fafb-42c2-8dfb-a9515c71955f)
 
-You don’t have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn’t feel obligated to use this feature. However we understand that this tool wouldn’t be useful if you couldn’t customize it when you are ready for it.
+Кнопка с изображением "печеньки" обозначает, что сотрудник получит премию. При этом его цвет меняется, и счётчик премированных сотрудников в header обновляется.
 
-## Learn More
+![Запись 2024-10-17 134239](https://github.com/user-attachments/assets/545e457b-b219-4fd9-9c38-67df0c2523b0)
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+При нажатии на кнопку с изображением мусорной корзины сотрудник удаляется из списка.
+  
+![Запись 2024-10-17 134933](https://github.com/user-attachments/assets/23b7a541-d93d-4320-8ca0-b72c9fe34b3f)
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+- Добавление новых сотруднков
 
-### Code Splitting
+![image](https://github.com/user-attachments/assets/35d1dac1-6e5b-41b1-be61-9fadd4d9f7f0)
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
+Валидация ввода: в поле имени нельзя вводить числа, а в поле заработной платы — только цифры.
 
-### Analyzing the Bundle Size
+![image](https://github.com/user-attachments/assets/38244dbb-8e87-42e3-b3f8-92ebfe758b46)
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
+![image](https://github.com/user-attachments/assets/9406e8c7-a0f2-48ef-863f-3e9a4bce35e5)
 
-### Making a Progressive Web App
+При оставлении какого-либо поля незаполненным отображается соответствующее сообщение.
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
+![image](https://github.com/user-attachments/assets/0b86183c-aac9-4b00-97b2-06ab55849450)
 
-### Advanced Configuration
+При корректном заполнении полей новый сотрудник добавляется в список.
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
+![Запись 2024-10-17 140015](https://github.com/user-attachments/assets/6f64fc2d-3f2e-4b2b-b541-3fb2d180a8c8)
 
-### Deployment
+## Технологии
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `yarn build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+- ReactJS 18
+- createRoot
+  
